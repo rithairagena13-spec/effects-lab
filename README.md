@@ -1,19 +1,79 @@
-# React + Vite
+# Effects Lab – React useEffect Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React application built with Vite to practice understanding and using the `useEffect` Hook to synchronize components with external systems.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Effects Lab contains three independent interactive widgets. Each widget demonstrates a different use of React's `useEffect` Hook.
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### 1. Title Mirror
+- Provides a controlled input.
+- Updates the browser tab title whenever the input changes.
+- Demonstrates synchronizing React state with the browser document.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+### 2. Saved Note
+- Restores a previously saved note from `localStorage`.
+- Automatically saves changes whenever the note is updated.
+- Demonstrates synchronizing React state with browser storage.
 
-## Expanding the ESLint configuration
+### 3. Live Clock
+- Displays the current time.
+- Updates every second using `setInterval()`.
+- Uses `clearInterval()` for cleanup when the component unmounts.
+- Can be hidden and displayed again.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- React
+- JavaScript
+- Vite
+- HTML
+- CSS
+- React Hooks (`useState` and `useEffect`)
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+### 2. Navigate into the project
+
+```bash
+cd use-effect
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL provided by Vite in your browser.
+
+## Key Learning Outcomes
+
+- Understanding the purpose of `useEffect`.
+- Identifying side effects in React applications.
+- Understanding dependency arrays.
+- Synchronizing React components with external browser systems.
+- Using cleanup functions to prevent unnecessary background processes.
+- Understanding the difference between pure calculations, event handlers, and Effects.
+
+## Author
+
+Ritha IRAGENA
+
+## Project Purpose
+
+This project was created as part of a React in-class activity to practice and understand the `useEffect` Hook through practical examples.
